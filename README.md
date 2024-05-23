@@ -34,6 +34,9 @@ The unalignment_ratio metric is calculated as follows:
 
 Here, total_unaligned is the sum of the unaligned words in both the target and source languages. This number includes any target words that don't have a corresponding source word (indicative of missing words in the source) and any source words without a matching target word (indicative of padding or extra words in the translation). The sentence_length is usually the length of the sentence in terms of the number of words in the source, target, or the longer of the two, depending on the specific implementation.
 
+<img width="491" alt="image" src="https://github.com/Pratyusha3Purdue/Audio-To-Text-Alignment/assets/141969918/86362263-6b39-4812-9dda-dc4b31886884">
+
+
 ### Drawbacks of the unalignment_ratio Metric:
 1.	Does Not Account for Misalignments: This metric only considers the presence or absence of an alignment but does not measure the accuracy of the alignments. A word could be aligned to the incorrect counterpart, and this metric would not capture such errors.
 2.	Sentence Length Variability: If sentence_length is defined differently for source and target texts (for instance, using the longer sentence), it could skew the results. Languages with naturally longer or shorter sentence structures compared to their translation could unfairly influence the ratio.
